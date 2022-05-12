@@ -6,12 +6,12 @@ import { Main } from '../components/main';
 
 const Home: NextPage = () => {
   return (
-      <Box minH='100vh' display='flex' flexDirection='column'>
+      <>
         <Head>
           <title>Blog by Igor</title>
         </Head>
         <Main/>
-      </Box>
+      </>
   );
 };
 
