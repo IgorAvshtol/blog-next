@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ChakraProvider, extendTheme, type ThemeConfig } from '@chakra-ui/react';
+
 import { Layout } from '../components/layout';
 
 const config: ThemeConfig = {
@@ -19,7 +20,6 @@ const breakpoints = {
 const theme = extendTheme({config, breakpoints});
 
 function MyApp({Component, pageProps}: AppProps) {
-
   return (
       <ChakraProvider theme={theme}>
         <Layout>

@@ -6,3 +6,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+@font-face {
+  font-family: 'Menlo Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Menlo Regular'), url('../assets/Menlo-Regular.woff') format('woff');
+}
+

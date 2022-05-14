@@ -8,7 +8,8 @@ export function Main() {
       <main>
         <Flex mt='20px' flexDirection='column' alignItems='center' flex='auto'>
           <Box zIndex={-1}>
-            <Image src={colorMode === 'light' ? '/images/main.jpg' : '/images/mainDark.jpg'} alt='main-cover' layout='fill'
+            <Image src={colorMode === 'light' ? '/images/main.jpg' : '/images/mainDark.jpg'} alt='main-cover'
+                   layout='fill'
                    objectFit='cover' objectPosition='center'/>
           </Box>
 

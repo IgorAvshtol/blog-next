@@ -1,7 +1,8 @@
+import { Flex } from '@chakra-ui/react';
+
 import { ReactNode } from 'react';
 import { Header } from './header';
 import { Footer } from './footer';
-import { Box, Flex } from '@chakra-ui/react';
 
 interface ILayout {
   children: ReactNode;

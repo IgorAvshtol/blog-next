@@ -1,4 +1,5 @@
 import { Box, Flex, Image } from '@chakra-ui/react';
+import Head from 'next/head';
 
 const images = [
   {
@@ -31,6 +32,9 @@ export default function ImageGallery() {
   return (
       <Flex width='90%' m='0 auto' flexWrap='wrap' mt={10}
             justifyContent={{lg: 'space-between', md: 'center', sm: 'center'}}>
+        <Head>
+          <title>Blog by Igor | Gallery</title>
+        </Head>
         {images.map((image) => (
             <Box width='400px' m='10px 20px' shadow='md' p={2} key={image.id}>
               <Image src={image.URL} alt='Image'/>

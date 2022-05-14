@@ -22,6 +22,11 @@ export function Header() {
                   <Text fontFamily='IBM Plex Mono' fontSize={14}>GALLERY</Text>
                 </a>
               </Link>
+              <Link href='/gist'>
+                <a>
+                  <Text fontFamily='IBM Plex Mono' fontSize={14}>GISTS</Text>
+                </a>
+              </Link>
             </Flex>
           </Flex>
         </Flex>
