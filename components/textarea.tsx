@@ -18,3 +18,5 @@ export const AutosizeTextarea = forwardRef<HTMLTextAreaElement, TextareaProps>((
       />
   );
 });
+
+AutosizeTextarea.displayName = 'AutosizeTextarea';

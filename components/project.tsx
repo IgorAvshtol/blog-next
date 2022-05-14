@@ -16,7 +16,7 @@ export function Project({title, link}: IProject) {
              _hover={{bgColor: colorMode === 'light' ? '#e2e6ea' : '#1d4973'}}>
           <a href={link}>
             <Flex alignItems='center'>
-              <Image src='/images/github.png' width={35} height={35}/>
+              <Image src='/images/github.png' width={35} height={35} alt='github-logo'/>
               <Text ml='20px' fontSize={'lg'}>
                 {title}
               </Text>
