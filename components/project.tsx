@@ -10,7 +10,7 @@ export function Project({title, link}: IProject) {
   const {colorMode} = useColorMode();
 
   return (
-      <Flex mt='20px' direction='column' minW='300px' w='20%'>
+      <Flex mt='20px' direction='column' minW='340px' w='20%'>
         <Box h='50' p='10px'
              bgColor={colorMode === 'light' ? '#EDF2F7' : 'rgba(255,255,255,0.08)'} borderRadius='10px'
              _hover={{bgColor: colorMode === 'light' ? '#e2e6ea' : '#1d4973'}}>

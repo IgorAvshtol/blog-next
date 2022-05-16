@@ -1,6 +1,7 @@
 import { Flex, Heading } from '@chakra-ui/react';
 
 import { Project } from '../components/project';
+import Head from 'next/head';
 
 const projects = [
   {title: 'IgorAvshtol/init-app', link: 'https://github.com/IgorAvshtol/init-app'},
@@ -11,6 +12,9 @@ const projects = [
 export default function Projects() {
   return (
       <Flex direction='column' alignItems='center'>
+        <Head>
+          <title>Blog by Igor | Projects</title>
+        </Head>
         <Heading as='h3' size='xl' my='10px'>
           Projects
         </Heading>
