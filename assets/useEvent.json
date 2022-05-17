@@ -1,0 +1,6 @@
+{
+  "first": "export const ParentComponent = () => {\n  const handleSomething = () => {};\n  return <MemoizedComponent onSomething={handleSomething} />\n};",
+  "second": "export const ParentComponent = () => {\n  const handleSomething = useCallback(() => {}, []);\n  return <MemoizedComponent onSomething={handleSomething} />\n};",
+  "third": "export const ParentComponent = () => {\n  const [textValue, setTextValue] = useState();\n  const handleSomething = useCallback(() => {\n    // does something with textValue\n  }, [textValue]);\n  return <MemoizedComponent onSomething={handleSomething} />\n};",
+  "fourth": "export const ParentComponent = () => {\n  const [textValue, setTextValue] = useState();\n  const handleSomething = useEvent(() => {\n    // does something with textValue\n  });\n  return <MemoComponent onSomething={handleSomething} />\n};"
+}

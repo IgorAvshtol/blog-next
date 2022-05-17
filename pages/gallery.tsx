@@ -31,7 +31,7 @@ const images = [
 export default function ImageGallery() {
   return (
       <Flex width='90%' m='0 auto' flexWrap='wrap' mt={10}
-            justifyContent={{lg: 'space-between', md: 'center', sm: 'center'}}>
+            justifyContent={{ lg: 'space-between', md: 'center', sm: 'center' }}>
         <Head>
           <title>Blog by Igor | Gallery</title>
         </Head>

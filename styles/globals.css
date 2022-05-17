@@ -1,15 +1,19 @@
+mark {
+    font-style: italic;
+    padding: 5px;
+    background: #ececec;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 @font-face {
-  font-family: 'Menlo Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Menlo Regular'), url('../assets/Menlo-Regular.woff') format('woff');
+    font-family: 'Menlo Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Menlo Regular'), url('../assets/Menlo-Regular.woff') format('woff');
 }
 

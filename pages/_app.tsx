@@ -1,8 +1,11 @@
-import '../styles/globals.css';
+import 'styles/globals.css';
+import '../node_modules/highlight.js/styles/vs2015.css';
+import NextNProgress from 'nextjs-progressbar';
+
 import type { AppProps } from 'next/app';
 import { ChakraProvider, extendTheme, type ThemeConfig } from '@chakra-ui/react';
 
-import { Layout } from '../components/layout';
+import { Layout } from 'components/layout';
 
 const config: ThemeConfig = {
   initialColorMode: 'light',
@@ -17,12 +20,17 @@ const breakpoints = {
   '2xl': '1536px',
 };
 
-const theme = extendTheme({config, breakpoints});
+const theme = extendTheme({ config, breakpoints });
 
-function MyApp({Component, pageProps}: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
       <ChakraProvider theme={theme}>
         <Layout>
+          <NextNProgress color='#29D'
+                         startPosition={0.3}
+                         stopDelayMs={200}
+                         height={3}
+                         showOnShallow={true}/>
           <Component {...pageProps} />
         </Layout>
       </ChakraProvider>);

@@ -1,0 +1,7 @@
+{
+  "first": "import React, { Fragment } from 'react';\nimport PropTypes from 'prop-types';\n\nimport Icon from './../../components/icon';\nimport AuthorAvatar from './../../components/author-avatar';\nimport Date from './../../components/date';\nimport Image from './../../components/image';\nimport HtmlLink from './../../components/html-link';\nimport { SOURCES } from './../../config/defaultConfig';\n\nimport * as styles from './index.scss';",
+  "second": "import useApi from './../../hooks/use-api';\nimport Date from './../../components/date';\nimport Image from './../../components/image';\nimport transfromUserData from './../../helpers/transform-user-data';\n// etc...",
+  "third": "import useApi from 'hooks/use-api';\nimport Date from 'components/date';\nimport Image from 'components/image';\nimport transfromUserData from 'helpers/transform-user-data';",
+  "fourth": "{\n  \"compilerOptions\": {\n    \"baseUrl\": \"src\"\n  },\n  \"include\": [\"src\"]\n}",
+  "sixth": "import React, { Fragment } from 'react';\nimport PropTypes from 'prop-types';\nimport classNames from 'classnames';\nimport replace from 'lodash/replace';\n\nimport Icon from 'components/icon';\nimport AuthorAvatar from 'components/author-avatar';\nimport Date from 'components/date-representation';\nimport Image from 'components/image';\nimport HtmlLink from 'components/html-link';\nimport { SOURCES } from 'config';\n\nimport * as styles from './index.scss';"
+}

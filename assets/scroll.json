@@ -1,0 +1,7 @@
+{
+  "first": "export default function Parent() {\n  const [items, setItems] = useState([]);\n\n  const handleSetItems = () => {\n    setItems((prevItems) => {\n      return [\n        ...prevItems,\n        ...new Array(10).fill(\"\").map((_, index) => ({\n          name: `Some item ${index + prevItems.length}`,\n        }))\n      ];\n    });\n  };\n\n  return (\n    <div className=\"App\">\n      <button onClick={handleSetItems}>Add items</button>\n      {items.map((item, index) => (<div key={item.name}>{item.name}</div>))}\n    </div>\n  );\n}",
+  "second": "export default function Parent() {\n  const [items, setItems] = useState([]);\n  const firstNewItemIndex = useRef();\n\n  const handleSetItems = () => {\n    setItems((prevItems) => {\n      firstNewItemIndex.current = prevItems.length + 1",
+  "third": "function Child({ name }) {\n  const ref = useRef()\n  useEffect(() => {\n    // When no dependencies are passed to the useEffect hook\n    // it will run only once when mounted\n  }, []);\n  return <div ref={ref}>{name}</div>;\n}",
+  "fourth": "{items.map((item, index) => (\n  <Child\n    key={item.name}\n    name={item.name}\n    shouldScrollTo={firstNewItemIndex.current === index}\n  />\n))}",
+  "fifth": "function Child({ name, shouldScrollTo }) {\n  const ref = useRef()\n  useEffect(() => {\n    shouldScrollTo && ref.current.scrollIntoView({behavior: \"smooth\"});\n  }, []);\n  return <div ref={ref}>{name}</div>;\n}"
+}
