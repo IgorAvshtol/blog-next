@@ -16,34 +16,26 @@ export function Header() {
               <TabList>
                 <Tab>
                   <Link href='/'>
-                    <a>
-                      <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
-                            color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>HOME</Text>
-                    </a>
+                    <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
+                          color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>HOME</Text>
                   </Link>
                 </Tab>
                 <Tab>
                   <Link href='/gallery'>
-                    <a>
-                      <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
-                            color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>GALLERY</Text>
-                    </a>
+                    <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
+                          color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>GALLERY</Text>
                   </Link>
                 </Tab>
                 <Tab>
                   <Link href='/projects'>
-                    <a>
-                      <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
-                            color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>PROJECTS</Text>
-                    </a>
+                    <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
+                          color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>PROJECTS</Text>
                   </Link>
                 </Tab>
                 <Tab>
                   <Link href='/posts'>
-                    <a>
-                      <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
-                            color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>POSTS</Text>
-                    </a>
+                    <Text fontFamily='IBM Plex Mono' fontSize={{ md: '14px', sm: '10px' }}
+                          color={colorMode === 'light' ? 'gray.600' : 'whiteAlpha.900'}>POSTS</Text>
                   </Link>
                 </Tab>
               </TabList>

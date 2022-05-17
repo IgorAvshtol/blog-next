@@ -4,7 +4,7 @@ import { Flex } from '@chakra-ui/react';
 import { Post } from './post';
 
 export const postsArray = [
-  <Post key={1} image={'/images/lens.webp'} href='/posts/fetching-data' title='Scroll to a newly added DOM element'
+  <Post key={1} image={'/images/lens.webp'} href='/posts/scroll' title='Scroll to a newly added DOM element'
         description='Parent component renders child components based on some local state'/>,
   <Post key={2} image={'/images/useEvent.png'} href='/posts/useevent' title='React may be getting a new hook — useEvent'
         description='New React hook that is named useEvent'/>,
