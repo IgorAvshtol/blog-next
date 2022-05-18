@@ -1,9 +1,9 @@
-import { Header } from 'components/posts/header';
+import { PostHeader } from 'components/posts/PostHeader';
 import { Box, Flex, Heading, Link, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Head from 'next/head';
 
-import { GistBlock } from 'components/gistBlock';
+import { Gist } from 'components/Gist';
 import code from 'assets/absolute.json';
 
 export default function Absolute() {
@@ -12,7 +12,7 @@ export default function Absolute() {
         <Head>
           <title>Blog by Igor | Absolute imports in Create React App</title>
         </Head>
-        <Header date={'Jun 21,2020'}/>
+        <PostHeader date={'Jun 21,2020'}/>
         <Heading as='h3' size='lg' my='20px'>
           Absolute imports in Create React App
         </Heading>
@@ -29,7 +29,7 @@ export default function Absolute() {
         <Heading as='h3' my='20px' fontSize='22px'>
           Why do you need absolute imports?
         </Heading>
-        <GistBlock code={code.first} filename={'parent.js'}/>
+        <Gist code={code.first} filename={'parent.js'}/>
         <Heading as='h3' my='20px' fontSize='22px'>
           Absolute imports to the rescue!
         </Heading>
@@ -37,11 +37,11 @@ export default function Absolute() {
           Absolute imports can help you make that code a lot cleaner, more readable and manageable. We want to be able
           to transform our paths from this:
         </Text>
-        <GistBlock code={code.second} filename={'parent.js'}/>
+        <Gist code={code.second} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           to that:
         </Text>
-        <GistBlock code={code.third} filename={'parent.js'}/>
+        <Gist code={code.third} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           Let&apos;s assume you have <mark>src</mark> with multiple directories where your code lives. We want to
           make <mark>src</mark> your base path
@@ -56,13 +56,13 @@ export default function Absolute() {
           <mark>tsconfig.json</mark>
           in case you used TypeScript template). Then add <mark>baseUrl</mark> configuration to it:
         </Text>
-        <GistBlock code={code.fourth} filename={'parent.js'}/>
+        <Gist code={code.fourth} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           That few simple lines will tell CRA config to use your <mark>src</mark> directory as a base for your imports
           so you can
           import your components with absolute paths. After that you can change imports in your code as presented below:
         </Text>
-        <GistBlock code={code.fourth} filename={'parent.js'}/>
+        <Gist code={code.fourth} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           A lot cleaner and without ./../ mess. I hope you found it right on time! :)
           <br/><br/>

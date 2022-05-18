@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { Flex } from '@chakra-ui/react';
 
-import { Post } from './post';
+import { Post } from './Post';
 
-export const postsArray = [
+export const postData = [
   <Post key={1} image={'/images/lens.webp'} href='/posts/scroll' title='Scroll to a newly added DOM element'
         description='Parent component renders child components based on some local state'/>,
   <Post key={2} image={'/images/useEvent.png'} href='/posts/useevent' title='React may be getting a new hook — useEvent'
@@ -12,14 +12,14 @@ export const postsArray = [
         description='One of the things that held me back from Create React App was the lack of absolute imports...'/>
 ];
 
-export function PostsContainer() {
+export function PostData() {
   return (
       <Flex m='0 auto' flexWrap='wrap' justifyContent={{ lg: 'space-between', md: 'center', sm: 'center' }}>
         <Head>
           <title>Blog by Igor | Posts</title>
         </Head>
         {
-          postsArray.map(post => <div key={post.key}>{post}</div>)
+          postData.map(post => <div key={post.key}>{post}</div>)
         }
       </Flex>
   );

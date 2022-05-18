@@ -4,7 +4,7 @@ interface IHeader {
   date: string;
 }
 
-export function Header({ date }: IHeader) {
+export function PostHeader({ date }: IHeader) {
   return (
       <Flex>
         <WrapItem>

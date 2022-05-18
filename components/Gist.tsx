@@ -6,7 +6,7 @@ interface IGist {
   filename: string;
 }
 
-export function GistBlock({ code, filename }: IGist) {
+export function Gist({ code, filename }: IGist) {
   return (
       <Flex border='1px solid #ddd' borderRadius='5px' direction='column'>
         <Box fontSize={{ md: '14px', sm: '12px' }}>

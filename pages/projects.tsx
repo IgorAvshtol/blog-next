@@ -1,7 +1,7 @@
 import { Flex, Heading } from '@chakra-ui/react';
 import Head from 'next/head';
 
-import { Project } from 'components/project';
+import { Project } from 'components/Project';
 
 const projects = [
   { title: 'IgorAvshtol/init-app', link: 'https://github.com/IgorAvshtol/init-app' },

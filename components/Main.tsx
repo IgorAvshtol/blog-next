@@ -1,11 +1,11 @@
 import { Box, Flex, Heading, useColorMode } from '@chakra-ui/react';
 import Image from 'next/image';
 
-import { postsArray } from './posts/postsContainer';
+import { postData } from './posts/PostData';
 
 export function Main() {
   const { colorMode } = useColorMode();
-  const trimmedArray = postsArray.slice(0, -1);
+  const trimmedArray = postData.slice(0, -1);
 
   return (
       <Flex mt='20px' flexDirection='column'

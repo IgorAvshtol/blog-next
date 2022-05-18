@@ -2,8 +2,8 @@ import { Box, Flex, Heading, ListItem, OrderedList, Text } from '@chakra-ui/reac
 import Image from 'next/image';
 import Head from 'next/head';
 
-import { Header } from 'components/posts/header';
-import { GistBlock } from 'components/gistBlock';
+import { PostHeader } from 'components/posts/PostHeader';
+import { Gist } from 'components/Gist';
 import code from 'assets/scroll.json';
 
 export default function Scroll() {
@@ -12,7 +12,7 @@ export default function Scroll() {
         <Head>
           <title>Blog by Igor | AScroll to a newly added DOM element</title>
         </Head>
-        <Header date={'Nov 27,2021'}/>
+        <PostHeader date={'Nov 27,2021'}/>
         <Heading as='h3' size='lg' my='20px'>
           Scroll to a newly added DOM element
         </Heading>
@@ -32,7 +32,7 @@ export default function Scroll() {
           See the parent component below — right now, it does everything, but the scrolling part. It has an “Add items”
           button, which — when pressed-add 10 more items to the existing state of items:
         </Text>
-        <GistBlock code={code.first} filename={'parent.js'}/>
+        <Gist code={code.first} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           There are two crucial pieces of information that we need to achieve that:
         </Text>
@@ -52,7 +52,7 @@ export default function Scroll() {
           to <mark>setItems</mark>. If we add <mark>+1</mark>
           to this length, we will get the index of the first recently added item:
         </Text>
-        <GistBlock code={code.second} filename={'parent.js'}/>
+        <Gist code={code.second} filename={'parent.js'}/>
         <Heading as='h3' my='20px' fontSize='22px'>
           Scroll to the new item on mount
         </Heading>
@@ -68,13 +68,13 @@ export default function Scroll() {
           world of
           hooks, the child component that renders the item will look like this:
         </Text>
-        <GistBlock code={code.third} filename={'parent.js'}/>
+        <Gist code={code.third} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           When rendering <mark>items</mark> , we need to somehow tell the first “new” instance of the child component
           that viewport
           should be scrolled to. For that, we will pass a <mark>shouldScrollTo</mark> as follows:
         </Text>
-        <GistBlock code={code.fourth} filename={'parent.js'}/>
+        <Gist code={code.fourth} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           Here we simply compare if the item that we are rendering has the same <mark>index</mark> as
           the <mark>firstNewItemIndex</mark> to tell that <mark>Child</mark> instance that it should be scrolled to
@@ -82,7 +82,7 @@ export default function Scroll() {
           <br/><br/>
           Finally, we need to use the <mark>shouldScrollTo</mark> to, well, actually scroll and we do so as follows:
         </Text>
-        <GistBlock code={code.fifth} filename={'parent.js'}/>
+        <Gist code={code.fifth} filename={'parent.js'}/>
         <Text my='20px' fontSize='20px'>
           And there we have it — now every time new items are added, the app will automatically scroll to the first one
           in the most recent set added.

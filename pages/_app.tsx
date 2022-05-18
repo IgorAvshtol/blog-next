@@ -5,7 +5,7 @@ import NextNProgress from 'nextjs-progressbar';
 import type { AppProps } from 'next/app';
 import { ChakraProvider, extendTheme, type ThemeConfig } from '@chakra-ui/react';
 
-import { Layout } from 'components/layout';
+import { Layout } from 'components/Layout';
 
 const config: ThemeConfig = {
   initialColorMode: 'light',

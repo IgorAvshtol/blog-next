@@ -7,4 +7,4 @@ export default function Custom404() {
         <Image src='/images/404-not-found.png' width={600} height={320} objectFit='cover' alt='404-error-cover'/>
       </Flex>
   );
-}
+};
