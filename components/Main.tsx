@@ -1,11 +1,12 @@
 import { Box, Flex, Heading, useColorMode } from '@chakra-ui/react';
 import Image from 'next/image';
 
-import { postData } from './posts/PostData';
+import { postsData } from './posts/PostData';
+import { Post } from './posts/Post';
 
 export function Main() {
   const { colorMode } = useColorMode();
-  const trimmedArray = postData.slice(0, -1);
+  const lastPosts = postsData.slice(0, -1);
 
   return (
       <Flex mt='20px' flexDirection='column'
@@ -21,7 +22,8 @@ export function Main() {
           <Flex flexDirection={{ xl: 'row', lg: 'column', md: 'column', sm: 'column' }} justifyContent='space-between'
                 alignItems={{ lg: 'center', md: 'center', sm: 'center' }}>
             {
-              trimmedArray.map(post => <div key={post.key}>{post}</div>)
+              lastPosts.map(post => <Post key={post.title} href={post.href} image={post.image} title={post.title}
+                                          description={post.description}/>)
             }
           </Flex>
         </Flex>

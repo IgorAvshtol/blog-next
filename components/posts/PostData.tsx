@@ -3,13 +3,25 @@ import { Flex } from '@chakra-ui/react';
 
 import { Post } from './Post';
 
-export const postData = [
-  <Post key={1} image={'/images/lens.webp'} href='/posts/scroll' title='Scroll to a newly added DOM element'
-        description='Parent component renders child components based on some local state'/>,
-  <Post key={2} image={'/images/useEvent.png'} href='/posts/useevent' title='React may be getting a new hook — useEvent'
-        description='New React hook that is named useEvent'/>,
-  <Post key={3} image={'/images/absolute.webp'} href='/posts/absolute' title='Absolute imports in Create React App'
-        description='One of the things that held me back from Create React App was the lack of absolute imports...'/>
+export const postsData = [
+  {
+    title: 'Scroll to a newly added DOM element',
+    description: 'Parent component renders child components based on some local state',
+    image: '/images/lens.webp',
+    href: '/posts/scroll'
+  },
+  {
+    title: 'React may be getting a new hook — useEvent',
+    description: 'New React hook that is named useEvent',
+    image: '/images/useEvent.png',
+    href: '/posts/useevent'
+  },
+  {
+    title: 'Absolute imports in Create React App',
+    description: 'One of the things that held me back from Create React App was the lack of absolute imports...',
+    image: '/images/absolute.webp',
+    href: '/posts/absolute'
+  }
 ];
 
 export function PostData() {
@@ -19,7 +31,8 @@ export function PostData() {
           <title>Blog by Igor | Posts</title>
         </Head>
         {
-          postData.map(post => <div key={post.key}>{post}</div>)
+          postsData.map(post => <Post key={post.title} href={post.href} image={post.image} title={post.title}
+                              description={post.description}/>)
         }
       </Flex>
   );
